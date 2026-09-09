@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Pulse - A modern music discovery website redesign"
+  >
+
+  <title>Pulse - Music Redesign</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+
+  <aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+      <span class="brand-mark">P</span>
+      <span>Pulse</span>
+    </div>
+
+    <nav class="main-nav">
+
+      <a href="#home" class="active">
+        <span>⌂</span>
+        <span>Home</span>
+      </a>
+
+      <a href="#discover">
+        <span>◈</span>
+        <span>Discover</span>
+      </a>
+
+      <a href="#library">
+        <span>♫</span>
+        <span>Library</span>
+      </a>
+
+      <a href="#artists">
+        <span>♬</span>
+        <span>Artists</span>
+      </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <p class="small-label">YOUR SPACE</p>
+
+      <a href="#liked">
+        <span>♡</span>
+        <span>Liked Songs</span>
+      </a>
+
+      <a href="#playlists">
+        <span>▣</span>
+        <span>Playlists</span>
+      </a>
+
+      <button class="ghost-btn" id="themeBtn">
+        <span>◐</span>
+        <span>Focus mode</span>
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+
+  <main>
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+      <div class="search">
+
+        <span>⌕</span>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search songs, artists, albums..."
+          aria-label="Search"
+        >
+
+      </div>
+
+      <button class="profile">
+        TT
+      </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+          EDITOR'S PICK · 2026
+        </span>
+
+        <h1>
+          Find your
+          <br>
+          <em>next sound.</em>
+        </h1>
+
+        <p>
+          Fresh discoveries, timeless favorites, and carefully
+          curated playlists — all in one beautiful space.
+        </p>
+
+        <div class="hero-actions">
+
+          <button
+            class="primary play-action"
+            data-song="Midnight City"
+          >
+            ▶ Play discovery
+          </button>
+
+          <a
+            href="#discover"
+            class="secondary"
+          >
+            Explore picks
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ABSTRACT ART -->
+
+      <div class="hero-art">
+
+        <div class="orb orb-one"></div>
+
+        <div class="orb orb-two"></div>
+
+        <div class="album-label">
+          PULSE
+          <br>
+          <strong>01</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TRENDING ================= -->
+
+    <section
+      class="section"
+      id="discover"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            FOR YOU
+          </span>
+
+          <h2>
+            Trending now
+          </h2>
+
+        </div>
+
+        <button
+          class="text-btn"
+          id="seeAll"
+        >
+          See all →
+        </button>
+
+      </div>
+
+
+      <div
+        class="track-grid"
+        id="trackGrid"
+      >
+
+        <!-- TRACK 1 -->
+
+        <article
+          class="track-card"
+          data-search="midnight city m83 electronic"
+        >
+
+          <div class="cover c1">
+
+            <span>01</span>
+
+            <button
+              class="cover-play play-action"
+              data-song="Midnight City"
+            >
+              ▶
+            </button>
+
+          </div>
+
+          <div class="track-info">
+
+            <h3>
+              Midnight City
+            </h3>
+
+            <p>
+              M83 · Hurry Up, We're Dreaming
+            </p>
+
+          </div>
+
+          <button
+            class="like"
+            aria-label="Like Midnight City"
+          >
+            ♡
+          </button>
+
+        </article>
+
+
+        <!-- TRACK 2 -->
+
+        <article
+          class="track-card"
+          data-search="golden hour jvke pop"
+        >
+
+          <div class="cover c2">
+
+            <span>02</span>
+
+            <button
+              class="cover-play play-action"
+              data-song="Golden Hour"
+            >
+              ▶
+            </button>
+
+          </div>
+
+          <div class="track-info">
+
+            <h3>
+              Golden Hour
+            </h3>
+
+            <p>
+              JVKE · this is what ____ feels like
+            </p>
+
+          </div>
+
+          <button
+            class="like"
+            aria-label="Like Golden Hour"
+          >
+            ♡
+          </button>
+
+        </article>
+
+
+        <!-- TRACK 3 -->
+
+        <article
+          class="track-card"
+          data-search="after dark mr kitty synthwave"
+        >
+
+          <div class="cover c3">
+
+            <span>03</span>
+
+            <button
+              class="cover-play play-action"
+              data-song="After Dark"
+            >
+              ▶
+            </button>
+
+          </div>
+
+          <div class="track-info">
+
+            <h3>
+              After Dark
+            </h3>
+
+            <p>
+              Mr.Kitty · Time
+            </p>
+
+          </div>
+
+          <button
+            class="like"
+            aria-label="Like After Dark"
+          >
+            ♡
+          </button>
+
+        </article>
+
+
+        <!-- TRACK 4 -->
+
+        <article
+          class="track-card"
+          data-search="space song beach house dream pop"
+        >
+
+          <div class="cover c4">
+
+            <span>04</span>
+
+            <button
+              class="cover-play play-action"
+              data-song="Space Song"
+            >
+              ▶
+            </button>
+
+          </div>
+
+          <div class="track-info">
+
+            <h3>
+              Space Song
+            </h3>
+
+            <p>
+              Beach House · Depression Cherry
+            </p>
+
+          </div>
+
+          <button
+            class="like"
+            aria-label="Like Space Song"
+          >
+            ♡
+          </button>
+
+        </article>
+
+      </div>
+
+
+      <p
+        class="empty"
+        id="emptyState"
+      >
+        No tracks match your search.
+      </p>
+
+    </section>
+
+
+    <!-- ================= ARTISTS ================= -->
+
+    <section
+      class="section"
+      id="artists"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            THE SCENE
+          </span>
+
+          <h2>
+            Artists to watch
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="artist-row">
+
+        <div class="artist">
+
+          <div class="artist-img a1">
+            A
+          </div>
+
+          <strong>
+            Aurora
+          </strong>
+
+          <span>
+            Alt Pop
+          </span>
+
+        </div>
+
+
+        <div class="artist">
+
+          <div class="artist-img a2">
+            T
+          </div>
+
+          <strong>
+            The Weeknd
+          </strong>
+
+          <span>
+            R&B
+          </span>
+
+        </div>
+
+
+        <div class="artist">
+
+          <div class="artist-img a3">
+            O
+          </div>
+
+          <strong>
+            Olivia
+          </strong>
+
+          <span>
+            Pop
+          </span>
+
+        </div>
+
+
+        <div class="artist">
+
+          <div class="artist-img a4">
+            K
+          </div>
+
+          <strong>
+            Keshi
+          </strong>
+
+          <span>
+            Indie
+          </span>
+
+        </div>
+
+
+        <div class="artist">
+
+          <div class="artist-img a5">
+            F
+          </div>
+
+          <strong>
+            Fred again..
+          </strong>
+
+          <span>
+            Electronic
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PLAYLISTS ================= -->
+
+    <section
+      class="section"
+      id="playlists"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            MOODS
+          </span>
+
+          <h2>
+            Made for the moment
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="playlist-grid">
+
+        <div class="playlist p1">
+
+          <span>
+            Late night
+          </span>
+
+          <small>
+            48 tracks
+          </small>
+
+        </div>
+
+
+        <div class="playlist p2">
+
+          <span>
+            Deep focus
+          </span>
+
+          <small>
+            62 tracks
+          </small>
+
+        </div>
+
+
+        <div class="playlist p3">
+
+          <span>
+            Good energy
+          </span>
+
+          <small>
+            55 tracks
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= MUSIC PLAYER ================= -->
+
+  <div
+    class="player"
+    id="player"
+  >
+
+    <div class="now-playing">
+
+      <div class="mini-cover"></div>
+
+      <div>
+
+        <strong id="nowTitle">
+          Midnight City
+        </strong>
+
+        <span id="nowArtist">
+          M83
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="controls">
+
+      <button>
+        ↶
+      </button>
+
+      <button
+        class="main-control"
+        id="playBtn"
+      >
+        ▶
+      </button>
+
+      <button>
+        ↷
+      </button>
+
+      <div class="progress">
+
+        <span id="progressBar"></span>
+
+      </div>
+
+    </div>
+
+
+    <div class="volume">
+
+      <span>
+        ♬
+      </span>
+
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="70"
+        aria-label="Volume"
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST MESSAGE -->
+
+  <div
+    class="toast"
+    id="toast"
+  >
+    Added to your library
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
